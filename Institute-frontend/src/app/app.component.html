@@ -1,0 +1,66 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light my-4">
+    <a class="navbar-brand mx-5 " href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+    <div class="collapse navbar-collapse mx-5" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto ms-auto">
+
+
+        <li class="nav-item dropdown px-4">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="collapse" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Institute
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="addins" routerLinkActive="active">Add Institute</a>
+            <a class="dropdown-item" routerLink="viewinstitutes" routerLinkActive="active">View All Institutes</a>
+            
+          </div>
+        </li>
+
+
+        
+
+        <li class="nav-item dropdown px-4">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Department
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="adddep" routerLinkActive="active" >Add Department</a>
+            <a class="dropdown-item" routerLink="viewdepartments" routerLinkActive="active">View All Departments</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown px-4">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Social Profiles
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="addprofile" routerLinkActive="active">Add Social Profile</a>
+            <a class="dropdown-item" routerLink="viewprofiles" routerLinkActive="active">Login</a>
+            </div>
+            
+        </li>
+
+        </ul>
+        
+    </div>
+  </nav>
+
+
+<div class="container my-5" >
+<router-outlet></router-outlet>
+</div>
+
+<footer class=" my-auto " style="background-color: #0a4275;">
+    <!-- Grid container -->
+    
+    <!-- Copyright -->
+    <div class="text-center text-muted p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      Institute Application
+      <a class="text-white" href="#"> Institute.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>

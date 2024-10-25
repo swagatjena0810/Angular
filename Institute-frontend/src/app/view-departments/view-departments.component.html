@@ -1,0 +1,26 @@
+<h3 class="mx-auto my-5 test-muted text-center" style="color: red;"><strong>Departments</strong></h3>
+<table class="table">
+    <thead  class="thead-dark">
+        <tr>
+            
+            <th scope="col">Department Name</th>
+            <th scope="col">Short Name  </th>
+            <th scope="col">Department Code</th>
+            <th scope="col">Description</th>
+            
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let department of departments">
+            <td>{{department.departmentName}}</td>
+            <td>{{department.shortName}}</td>
+            <td>{{department.depCode}}</td>
+            <td>{{department.description}}</td>
+            
+            <td><button (click)="updateDepartment(department)" class="btn btn-info">Update</button>
+                <button (click)="deleteDepartment(department.depId)" class="btn btn-danger" style="margin-left: 10px">Delete</button> 
+            </td>
+        </tr>
+    </tbody>
+</table>

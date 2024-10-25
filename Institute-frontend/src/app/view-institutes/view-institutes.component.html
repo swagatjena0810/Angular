@@ -1,0 +1,26 @@
+<h3 class="mx-auto my-5 test-muted text-center" style="color: red;"><strong>Institutes</strong></h3>
+<table class="table">
+    <thead  class="thead-dark">
+        <tr>
+            
+            <th scope="col">Institute Name</th>
+            <th scope="col">Short Name  </th>
+            <th scope="col">Institute Code</th>
+            <th scope="col">Email</th>
+            <th scope="col">Contact Number</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let institute of institutes">
+            <td>{{institute.instituteName}}</td>
+            <td>{{institute.shortName}}</td>
+            <td>{{institute.instituteCode}}</td>
+            <td>{{institute.email}}</td>
+            <td>{{institute.contactNumber}}</td>
+            <td><button (click)="updateInstitute(institute)" class="btn btn-info">Update</button>
+                <button (click)="deleteInstitute(institute.insId)" class="btn btn-danger" style="margin-left: 10px">Delete</button> 
+            </td>
+        </tr>
+    </tbody>
+</table>

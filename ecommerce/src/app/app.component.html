@@ -1,0 +1,38 @@
+<div class="container-fluid text-muted text-center my-3 " style="font-size: 20px;">
+ <strong>WELCOME TO ECOMMERCE</strong>
+</div>
+
+
+<nav class="navbar navbar-expand-sm  bg-light" >
+  
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+  <ul class="navbar-nav ">
+      <li class="nav-item active ">
+          <a routerLink="register" routerLinkActive="active" class="nav-link " 
+          style="color: black"><strong>Register</strong>
+            <span class="sr-only">(current)</span>
+          </a>
+      </li>
+
+      <li class="nav-item active ">
+          <a routerLink="login" routerLinkActive="active" class="nav-link"
+          style="color: black"><strong>Login</strong>
+            <span class="sr-only">(current)</span> </a>
+      </li>
+  </ul>
+  </div>
+</nav>
+<div class="entire my-5 py-5">
+  <router-outlet></router-outlet>
+</div>
+<br><br><br><br><br><br>
+<footer class="footer">
+  <div class="container text-center">
+      <span class="text-muted ">ECommerce Application @2024 </span>
+  </div>
+</footer> 

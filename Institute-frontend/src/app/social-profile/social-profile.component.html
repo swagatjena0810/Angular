@@ -1,0 +1,90 @@
+<div class="contentBx">
+    <div class="formBx col-md-6 mx-auto">
+      <form #frm="ngForm" action="" class="form-box" (ngSubmit)="submit()">
+        <h3 class="text-center text-muted">Profile Info</h3>
+        <br />
+        <div class="form-group">
+        <label>HomePage URL</label>
+        <input
+          type="text"
+          name="profile.homePageUrl"
+          class="form-control"
+          required
+          placeholder="Enter the Home page URL"
+          [(ngModel)]="profile.homePageUrl"
+        />
+        </div>
+        
+        <div class="form-group">
+        <label>facebookProfileLink</label>
+        <input
+          type="text"
+          name="profile.facebookProfileLink"
+          class="form-control"
+          required
+          placeholder="Enter the Facebook Profile Link"
+          [(ngModel)]="profile.facebookProfileLink"   
+        />
+          </div>
+
+          <div class="form-group">
+        <label>Twitter Profile Link </label>
+        <input
+          type="text"
+          name="profile.twitterProfileLink"
+          class="form-control"
+          required
+          placeholder="Enter the Twitter Profile Link"
+          [(ngModel)]="profile.twitterProfileLink"  
+        />
+        </div>
+
+        
+
+      <div class="form-group">
+        <label>Linkedin Profile Link</label>
+        <input
+          type="text"
+          name="profile.linkedinProfileLink"
+          class="form-control"
+          required
+          placeholder="Enter the Linkedin Profile Link"
+          [(ngModel)]="profile.linkedinProfileLink" 
+        />
+        </div>
+
+        <div class="form-group">
+        <label>Pintrest profile Link</label>
+        <input
+          type="text"
+          name="profile.pinterestProfileLink"
+          class="form-control"
+          required
+          placeholder="Enter the Pintrest profile Link"
+          [(ngModel)]="profile.pinterestProfileLink" 
+        />
+        
+        </div>
+
+        <div class="form-group">
+            <label>GooglePlus profile Link</label>
+            <input
+              type="text"
+              name="profile.googlePlusProfileLink"
+              class="form-control"
+              required
+              placeholder="Enter the Google plus profile Link"
+              [(ngModel)]="profile.googlePlusProfileLink" 
+            />
+            
+            </div>
+
+        <div class="inputBx text-center">
+          <button class="btn btn-success" type="submit">Add</button>
+          </div>
+        
+    
+      </form>
+    </div>
+    </div>
+

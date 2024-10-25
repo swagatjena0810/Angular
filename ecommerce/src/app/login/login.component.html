@@ -1,0 +1,25 @@
+<section>
+    
+<div class="contentBx">
+<div class="formBx col-md-6 mx-auto">
+<h3 class="text-center text-muted"> Customer Login</h3>
+<form (ngSubmit)="onLogin()">
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp"      
+        [(ngModel)]="user.userEmail" name="userEmail">
+    </div>
+
+    <div class="form-group">
+        <label>User Password</label>
+        <input type="text" class="form-control" id="userPassword"
+        [(ngModel)]="user.userPassword" name="userPassword">
+    </div>
+    <div class="inputBx text-center">
+    <button class="btn btn-success" type="submit">Login</button>
+    </div>
+</form>
+</div>
+</div>
+</section>

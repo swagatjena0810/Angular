@@ -1,0 +1,36 @@
+public class EmployeeManagementApp {
+    public static void main(String[] args) {
+        // Hibernate initialization code
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("EmployeePersistenceUnit");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+        // Create an employee
+        Employee employee = new Employee();
+        employee.setName("John Doe");
+        employee.setPosition("Software Engineer");
+        employee.setSalary(50000.0);
+
+        // Create a department
+        Department department = new Department();
+        department.setName("Engineering");
+        department.setEmployees(Collections.singletonList(employee));
+
+        entityManager.getTransaction().begin();
+
+        // Persist the department and employee
+        entityManager.persist(department);
+        entityManager.persist(employee);
+
+        entityManager.getTransaction().commit();
+
+        // Retrieve employees from the database
+        List<Employee> employees = entityManager.createQuery("SELECT e FROM Employee e", Employee.class).getResultList();
+        for (Employee emp : employees) {
+            System.out.println(emp.getName() + " - " + emp.getPosition());
+        }
+
+        // Close the EntityManager and EntityManagerFactory
+        entityManager.close();
+        entityManagerFactory.close();
+    }
+}

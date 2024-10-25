@@ -1,0 +1,29 @@
+<h3 class="mx-auto my-5 test-muted text-center" style="color: rgb(66, 105, 211);"><strong>Social Profiles</strong></h3>
+<table class="table">
+    <thead  class="thead-dark">
+        <tr>
+            
+            <th scope="col">Home Page</th>
+            <th scope="col">Facebook </th>
+            <th scope="col">Twitter</th>
+            <th scope="col">Linkedin</th>
+            <th scope="col">Pintrest</th>
+            <th scope="col">Google +</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let profile of profiles">
+            <td>{{profile.homePageUrl}}</td>
+            <td>{{profile.facebookProfileLink}}</td>
+            <td>{{profile.twitterProfileLink}}</td>
+            <td>{{profile.linkedinProfileLink}}</td>
+            <td>{{profile.pinterestProfileLink}}</td>
+            <td>{{profile.googlePlusProfileLink}}</td>
+            
+            <td><button (click)="updateProfile(profile)" class="btn btn-info">Update</button>
+                <button (click)="deleteProfile(profile.sId)" class="btn btn-danger" style="margin-left: 10px">Delete</button> 
+            </td>
+        </tr>
+    </tbody>
+</table>

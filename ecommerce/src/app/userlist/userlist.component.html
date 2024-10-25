@@ -1,0 +1,18 @@
+<table class="table table-striped- mx-4 mr-4">
+    <thead>
+        <tr style="background-color: bisque;">
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.fullName}}</td>
+            <td>{{user.userEmail}}</td>
+            <td>{{user.userMobile}}</td>
+            <td> <button (click)="deleteUser(user.userId)" class="btn btn-danger">Delete</button> </td>
+        </tr>
+    </tbody>
+</table>

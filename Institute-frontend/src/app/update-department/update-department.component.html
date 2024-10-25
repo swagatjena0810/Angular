@@ -1,0 +1,65 @@
+<div class="contentBx">
+    <div class="formBx col-md-6 mx-auto">
+      <form #frm="ngForm" action="" class="form-box" (ngSubmit)="submit()">
+        <h3 class="text-center text-muted"> Update Department </h3>
+        <br />
+        <div class="form-group">
+        <label>Department Name</label>
+        <input
+          type="text"
+          name="department.departmentName"
+          class="form-control"
+          required
+          placeholder="enter the Department name"
+          [(ngModel)]="department.departmentName"
+        />
+        </div>
+        
+        <div class="form-group">
+        <label>Short Name</label>
+        <input
+          type="text"
+          name="department.shortName"
+          class="form-control"
+          required
+          placeholder="enter the Shortname"
+          [(ngModel)]="department.shortName"   
+        />
+          </div>
+
+          <div class="form-group">
+        <label>Departmentcode</label>
+        <input
+          type="text"
+          name="department.depCode"
+          class="form-control"
+          required
+          placeholder="enter the Department Code"
+          [(ngModel)]="department.depCode"  
+        />
+        </div>
+
+        
+
+      <div class="form-group">
+        <label>Email</label>
+        <input
+          type="text"
+          name="department.description"
+          class="form-control"
+          required
+          placeholder="enter the description"
+          [(ngModel)]="department.description" 
+        />
+        </div>
+
+        
+
+        <div class="inputBx text-center">
+            <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+        
+    
+      </form>
+    </div>
+    </div>
